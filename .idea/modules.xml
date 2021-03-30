@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/00.JYOC_GUIAS_RAPIDAS.iml" filepath="$PROJECT_DIR$/00.JYOC_GUIAS_RAPIDAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.JYOC_GUIAS_JAVA/1.JYOC_GUIAS_JAVA.iml" filepath="$PROJECT_DIR$/1.JYOC_GUIAS_JAVA/1.JYOC_GUIAS_JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.JYOC_GUIAS_ANDROID/2.JYOC_GUIAS_ANDROID.iml" filepath="$PROJECT_DIR$/2.JYOC_GUIAS_ANDROID/2.JYOC_GUIAS_ANDROID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.JYOC_GUIAS_JS/3.JYOC_GUIAS_JS.iml" filepath="$PROJECT_DIR$/3.JYOC_GUIAS_JS/3.JYOC_GUIAS_JS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.JYOC_GUIAS_PHP/4.JYOC_GUIAS_PHP.iml" filepath="$PROJECT_DIR$/4.JYOC_GUIAS_PHP/4.JYOC_GUIAS_PHP.iml" />
+    </modules>
+  </component>
+</project>
