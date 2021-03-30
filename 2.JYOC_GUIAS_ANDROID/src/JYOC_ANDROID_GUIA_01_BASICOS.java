@@ -1,4 +1,4 @@
-package android;
+
 
 import android.Manifest;
 import android.app.Activity;
@@ -145,7 +145,7 @@ import static android.content.Context.MODE_PRIVATE;
  */
 
 
-public class UtilsAndroidV6 {
+public class JYOC_ANDROID_GUIA_01_BASICOS {
 
 
     /**
