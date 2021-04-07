@@ -154,9 +154,9 @@ public class JYOC_ANDROID_UTILIDADES {
      * ***************************************************************************
      */
 
-    // **********************+++++++++++++++++++++++***************************************
-    // **                     INICIO BLOQUE PETICION PERMISOS                            **
-    // ********++++++++++++++++++++++++****************************************************
+    // **********************+++++++++++++++++++++++********************************
+    // **                     BLOQUE PETICION PERMISOS                            **
+    // ********++++++++++++++++++++++++*********************************************
     //
     // Procedimiendo de uso (en la primera actividad de la aplicacion):
     // 1.- Renombrar el método onCreate(savedInstanceState);  como
@@ -168,7 +168,12 @@ public class JYOC_ANDROID_UTILIDADES {
     // 4.- Modificar el arrayDePermisosSolicitados para incluir solo los que se necesita pedir
     // 5.- Añadir esos mismos permisos en el Android.Manifest con lineas como estas:
     //        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    //
 
+    //// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INICIO DEL BLOQUE PARA COPIAR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //// @@@@@@@@
+    //// @@@@@@@@ NO OLVIDAR AÑADIR LOS PERMISOS EN EL MANIFEST: <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    //// @@@@@@@@
     //private Bundle savedInstanceState;
     //private static final int PETICION_DE_PERMISOS_DESDE_ONCREATE = 12321;
     //private String[] arrayDePermisosSolicitados = {
@@ -188,8 +193,8 @@ public class JYOC_ANDROID_UTILIDADES {
     //@Override
     //protected void onCreate(Bundle savedInstanceState) {
     //    super.onCreate(savedInstanceState);
-    //    this.savedInstanceState = savedInstanceState;
     //    setContentView(R.layout.activity_main);
+    // 
     //    confirmarQueExistenTodosEstosPermisos(this, savedInstanceState, arrayDePermisosSolicitados);
     //}//  FIN nuevo onCreate
     //
@@ -256,6 +261,7 @@ public class JYOC_ANDROID_UTILIDADES {
     //        }
     //    }
     //}//  FIN onRequestPermissionsResult
+    //// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIN DEL BLOQUE PARA COPIAR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
     // **********************+++++++++++++++++++++++***************************************
     // **            FIN BLOQUE PETICION PERMISOS                                        **
