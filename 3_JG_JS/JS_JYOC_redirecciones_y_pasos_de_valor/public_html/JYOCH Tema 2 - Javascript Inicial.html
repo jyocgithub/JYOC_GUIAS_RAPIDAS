@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <title>Titulo</title>
+     </head>
+     <body>
+
+          *** COMO INCLUIR JAVASCRIPT EN UN HTML
+          ****************************************************
+          NOTA: Las etiquetas 
+          <script type="text/javascript"></script>  
+          tradicionales se pueden sustituir en HTML5 directamente por  
+          <script></script>,
+          dado que javascript es el lenguaje de script por defecto desde HTML5
+          
+          
+          1) JAVASCRIPT EN UN FICHERO EXTERNO:<br>
+          <script src="miScript1.js"></script>
+
+          2) JAVASCRIPT EN UN SCRIPT INTERNO:<br>
+          <script type="text/javascript">
+               // <script> // La cabecera puede ser directamente un tag <script>
+               // Aqui pueden ir las funciones y codigo js a usar en esta pagina
+
+          </script>
+
+          3) JAVASCRIPT INTERNO EN UN ELEMENTO<br>
+          <button type="button" id="boton1"
+                  onclick="document.getElementById('boton1').innerHTML = Date()">
+               Haz click en mi y veras la hora
+          </button><br>
+
+          Un Codigo Javascript se puede colocar en mitad de un HTML y se ejecuta directamente al procesarse<br>
+          <p id="parrafo1"> texto que va a cambiar</p><br>
+          <script>
+               document.getElementById("parrafo1").innerHTML = "nuevo texto al pasar por aqui";
+          </script>
+
+
+          -- LEER CONTENIDO DE UN ELEMENTO:
+          <script>
+               texto = document.getElementById("parrafo1").innerHTML;
+          </script>
+
+          -- CAMBIAR CONTENIDO DE UN ELEMENTO:
+          <script>
+               nuevotex = "el texto ha vuelto a cambiar";
+               document.getElementById("parrafo1").innerHTML = nuevotex;
+          </script>
+
+          -- ESCRIBIR DIRECTAMENTE EN UNA PAGINA CUALQUIER CONTENIDO
+          <script>
+               document.write(5 + 6);
+          </script>
+          CUIDADO: Si se ejecuta un document.write() cuando TODA la pagina html ya se ha cargado, 
+          se BORRA toda ella antes de escribir el contenido del document.write()
+
+
+            -- CAMBIAR UN ATRIBUTO DE UN ELEMENTO
+          <script>
+               document.getElementById("cabecera").id = "qwer"; 
+               document.getElementById('myImage').src='pic_bulbon.gif
+          </script>
+          
+            -- CAMBIAR EL STYLE DE UN ELEMENTO
+          <script>
+               document.getElementById("cabecera").style.fontSize = "25px";      
+          </script>
+
+
+          <script>
+
+               // un comentario Javascript empieza con // 
+
+               // Esta es una variable global pues esta fuera de una funcion:
+               var varglobal1 = 123;
+
+               function leer() {
+                    // Esta es una variable local pues esta declarada dentro de una funcion:
+                    var varlocal1 = 942;
+                    
+                    // Sin embargo esta es local, pues no se llego a declarar y se crea 
+                    // simplemente dandole valor:
+                    varglobal2 = 342; 
+                    
+                    // Aunque se si indica esta linea, se pasa a "modo estricto", y con el,
+                    // no se pueden usar variables sin declarar
+                    "use strict";
+ 
+ 
+                    document.getEle
+ 
+ 
+ 
+               }
+
+          </script>
+
+
+     </body>
+</html>

@@ -1,0 +1,25 @@
+CREATE DATABASE almacen
+
+USE almacen;
+
+CREATE TABLE familias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombreFamilia VARCHAR(11) NOT NULL,
+    foto LONGBLOB NOT NULL
+);
+
+CREATE TABLE articulos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    idFamilia INT(11),
+    descripcion VARCHAR(120) NOT NULL,
+    precioCoste FLOAT NOT NULL,
+    precioVenta FLOAT NOT NULL,
+    stock INT(11),
+    stockMin INT(11),
+    codProv VARCHAR(50),
+    unidadesVendidas INT(11),
+    foto LONGBLOB,
+    fecha DATE,
+    FOREIGN KEY (idFamilia) REFERENCES familias(id)
+)
+

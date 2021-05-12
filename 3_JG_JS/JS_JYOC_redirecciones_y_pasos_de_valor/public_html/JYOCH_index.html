@@ -1,0 +1,197 @@
+<!DOCTYPE html>                              <!-- Define que es un documento HTML -->
+<html>                                       <!-- root element of an HTML page -->
+     <head>                                   <!-- contains meta information about the document -->
+          <title>TODO supply a title</title>   <!-- specifies a title for the document -->
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head> 
+     <body>                                   <!--element  contains the visible page content -->
+
+          <script>
+               function otraFuncion() {
+                    document.getElementById("demo1").innerHTML = sumar(2, 6);
+                    document.getElementById("demo2").innerHTML = sumar;
+
+               }
+               function sumar(a, b) {
+                    return a + b;
+               }
+               var a = "Hola";
+               var b = 'Hola';
+               var c = "Me llamo 'Pepe'";
+               var d = "Me llamo \"Pepe\"";
+               var f = "Buenos dias para todos";
+
+               var x = a.length;        // LENGHT da el tamaño de una cadena
+               // (x vale 4)
+               x = f.indexOf("e");      // INDEXOF da la posicion de la primera ocurrencia 
+               // del parametro en la cadena (x vale 2, indice empieza por 0) 
+               x = f.indexOf("e", 6);   // idem INDEXOF solo que empexzando a buscar desde la posicion 
+               // del segundo parámetro (x vale -1. no encontro ocurrencia)
+               x = f.lastIndexOf("a");  // LASTINDEXOF da la posicion de la ultima ocurrencia 
+               // del parametro en la cadena (x vale 10)
+               x = f.search("[oa]");    // Idem INDEXOF solo que admite tambien buscar por una 
+               // expresion regular (x es 4, busca una "o" o una "a")
+               x = f.substring(1, 4);    // SUBSTRING devuelve la subcadena desde la posicion del 1er parametro
+               // (inclusive) hasta el segungo parametro (exxlusive) (x vale "uen") 
+               x = f.substring(10);     // Si solo hay un paramtro SUBSTRING devuelve desde ahi al final 
+               // (x vale "s para todos")
+               x = f.slice(-10);        // SLICE es igual que SUBSTRING, solo que acepta que el primer 
+               // paramertro sea negativo, con lo que la posicion inicial se 
+               // cuenta el comienzo desde el fin de la cadena (x vale "para todos")
+               x = f.substr(4, 5);       // SUBSTR es igual que SUBSTRING con dos parametros, siendo el 
+               // segundo el tamaño de la subcadena (x vale "os di")
+               x = f.replace("a", "xx"); // REPLACE sustituye la primera aparicion del primer parámetro
+               // por el segundo parámetro (x es "Buenos dixxs para todos") 
+               x = f.replace(/a/g, "xx");// para sustituir todas las apariciones y no solo la ultima, 
+               // usar una expresion regular acabada en g (global)
+               // (x es "Buenos dixxs pxxrxx todos") 
+               x = f.replace(/A/gi, "x");// REPLACE es "case sensitive", si se quiere buscar tanto 
+               // mayusculas como minusculas usar i en la expresion regular
+               // (x es "Buenos dixs pxrx todos") 
+               x = a.toUpperCase();     // TOUPPERCASE (sin parametros) convierte la cadena objeto
+               // a mayusculas (x es "HOLA")  
+               x = a.toLowerCase();     // TOLOWERCASE (sin parametros) convierte la cadena objeto
+               // a minusculas (x es "hola")  
+               x = a.concat(b);         // CONCAT concatena la cadena base con su parametro, es igual 
+               // usar el operador + (x vale "HolaHola")
+               x = a.charAt(1);         // CHARTAT devuelve un caracter, el de la posicion indicaa
+               // como parametro (x vale "o")
+               x = a.charCodeAt(3);     // CHARCODEAT devuelve el codigo Unicode (ascii) del caracter
+               // de la posicion indica como parametro (x vale 97)
+               x = a.concat(b);         // CONCAT contedena la cadena base con su parametro, es igual 
+               // usar el operador + (x vale "HolaHola")
+               x = f.split(" ");        // SPLIT devuelve un array, el resultante de trocear la cadena 
+               // base usando el parametro como separador
+               // (x es un array de 4 elementos, "Buenos" "dias" "para" "todos")
+               x = f.includes("nos");   // INCLUDES devuelve true si la cadena parametro esta en la 
+               // cadena base (x es true)
+               x = f.startsWith("Po");  // STARTSWITH devuelve true si la cadena base comienza por la 
+               // cadena parametro (x es false)
+               // (x es un array de 4 elementos, "Buenos" "dias" "para" "todos")
+               x = "  jaja  ".trim();   // TRIM elimina los espacios por delante y detra de la 
+               // cadena base (x es "jaja")
+          </script>
+          <script>
+               function numerosATope() {
+                    var a = 15;
+                    var b = 3.89;
+                    var c = "42";
+
+                    var x = a.toString();    // TOSTRING convierte un numero en una cadena
+                    // (x vale "15")
+                    x = Number(c);           // NUMBER convierte una cadena en un numero 
+                    // (x vale 42) 
+                    x = Number(true);        // (x vale 1)
+                    x = Number(false);        // (x vale 0)
+                    x = Number(new Date());  // (x vale 1404568046472)
+                    x = Number("10 20");        // (x vale NaN)
+                    x = parseInt(c);         // PARSEINT convierte una cadena en un numero entero
+                    // (x vale 42) (usar parseFloat, parseDouble)
+
+                    x = Math.abs(123.77);    // ABS devuelve el valor absoluto del parametro                         
+                    // (x vale 123)
+                    x = Math.round(123.77);    // ROUND devuelve el parametro redondeado                       
+                    // (x vale 123)
+                    x = Math.floor(77.84);   // FLOOR devuelve el valor entero (hacia abajo) del parametro                         
+                    // (x vale 77)
+                    x = Math.ceil(123.27);    // CEIL devuelve el valor entero (hacia arriba) del parametro                        
+                    // (x vale 124)
+                    x = Math.pow(3, 4);        // POW eleva el primer parametro a la potencia del segundo
+                    // (x vale 81)
+                    x = Math.random();        // RANDOM devuelve un numero aleatorio entre 0 y 1
+                    // Asi devuelve un numero aleatorio entre min y max
+                    x = Math.floor(Math.random() * (max - min)) + min;
+               }
+
+               function fechasATope() {
+                    x = new Date();     // x tiene la fecha actual
+                    // Para construir una fecha específica, usar (meses van de 0 a 11):
+                    x = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+                    x = new Date(year, month, day);
+                    x = new Date("2017-07-25");
+                    x = new Date(milliseconds);   // Milisegundos desde 1-1-70
+
+                    alert(x);                // Muestra: Thu Jul 27 2017 20:37:07 GMT+0200 (CEST)
+                    alert(x.toUTCString(); // Muestra: Thu, 27 Jul 2017 18:37:34 GMT
+
+                            z = x.getDate();  // da el numero de dia del mes de x ( de 1-31)
+                    z = x.getDay(); // da el numero de dia de la semana de x ( de 0-6)
+                    z = x.getFullYear();  // da el numero de año en 4 digitos de x 
+                    z = x.getHours(); // da el numero de hora de x ( de 0-23)
+                    z = x.getMonth(); // da el numero del mes de x ( de 0-11)
+                    z = x.getMinutes();  // da el numero de minutos de x ( de 0-59)
+                    z = x.getSeconds(); // da el numero de segundos de x ( de 0-59)
+                    z = x.getMilliseconds();  // da el numero milisegundos de x ( de 1-31)
+                    z = x.getSeconds();  // da el numero de dia del mes de x ( de 0-999)
+                    z = x.getTime();	// Da el total de milisegundos desde 1-1-70
+
+                    x.setDate(22);  // Cambia el numero del dia del mes de x 
+                    // existen los correspondientes setXXX a casi todos los getXXX indicados 
+
+                    x = getUTCDate();  // Igual que getDate(), pero devuelve la fecha UTC
+                    // existen los correspondientes getUTCXXX a casi todos los getXXX indicados 
+               }
+
+
+               function arraysATope() {
+                    // Nota: en todos los ejemplos se supone que el array aCoches no se esta cambiando
+                    var aCoches = ["Opel", "Volvo", "BMW"];  // crear un array
+                    var aCoches = new Array("Opel", "Volvo", "BMW");  // crear el mismo array
+                    // no es recomendable aunque un array es un object.
+                    var h = aCoches[1];    // leemos el valor de un elemento del array
+                    aCoches[2] = "Fiat"; // cambiamos el valor de un elemento del array
+                    delete aCoches[1];  // deja el elemento indicado como undefined (no desaparece)
+
+                    document.getElementById("demo").innerHTML = aCoches[2]; //mostrar un elemento del array
+                    document.getElementById("demo").innerHTML = aCoches; //mostrar array entero
+                    // sale Opel,Volvo,BMW
+
+                    aCoches.push("Lada");         // Añade un elemento al array                                                
+                    aCoches[8] = "Seat";    // Añade un elemento en la posicion 8 del array 
+                    // Los elementos entre medias del ultimo que habia y el 8
+                    // quedan como undefined 
+                    var t = aCoches.length  // LENGHT devuelve el numero de elementos del array
+                    // (t vale 3)
+                    var t = aCoches.toString()  // TOSTRING devuelve el array como string
+                    //  (t vale "Opel,Volvo,BMW")
+                    var t = aCoches.join("-")  // JOIN es igual que TOSTRING pero indicando un separador
+                    // de los elementos  (t vale "Opel-Volvo-BMW")
+                    var t = aCoches.pop()  // POP devuelve y elimina el ultimo elemento de un array
+                    aCoches.puch("Rover")  // PUSH añade (al final) un elemento al array y devuelve 
+                    // el nuevo tamaño del array
+                    var t = aCoches.shift()  // SHIFT Elimina el primer elemento del array (moviendo 
+                    // el resto) Devuevlve el valor eliminado (t  vale "Opel" y el array queda ["Volvo", "BMW"] 
+                    var t = aCoches.unshift("Seat")  // UNSHIFT añade un nuevo primer elemento al array (moviendo 
+                    // el resto hacia adelante) Devuevlve el valor nuevo tamaño del array
+                    //  (t es 4 y el array queda ["Seat", "Opel", Volvo", "BMW"] 
+                    aCoches.splice(2, 0, "Audi", "Skoda");  // SPLICE añade elementos al array
+                    // el 1er parametro es la posicion de insercion de los nuevos elementos
+                    // el 2do parametro es cuantos elementos, desde la insercion, se borran
+                    // la posicion de insercion de los nuevos elementos
+                    // el 3er parametro (y siguientes) son los elementos a insertar (son opcionales)
+
+                    // Se puede usar SPLICE para eliminar completamente elementos de un array;
+                    aCoches.splice(1, 2);
+
+                    aCoches.concat(["Bentley", "Rolls"]);   //CONCAT une varios arrays
+
+               }
+
+               function arraysOrdenacion() {
+                   
+                    var datos = [55, 79, 110, 101, 2, 7, 70];
+                    
+                    // El metodo SORT Ordena los 
+                    
+                    
+               }
+
+
+          </script>
+
+     </body>
+
+
+
+</html>

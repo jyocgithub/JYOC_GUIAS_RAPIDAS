@@ -1,0 +1,88 @@
+/*
+    Curso: 2020/2021
+    Asignatura: DWES
+    Unidad de Trabajo 5 - DWES05 Ejercicio 2
+    Autor: Borja Sainz Ansoleaga
+*/
+
+
+/*Formato general de la página Listavehiculo*/
+
+.contenedor {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    font-family: Arial;
+}
+
+
+/*Centra los titulos h1 de la página*/
+
+.contenedor h1 {
+    text-align: center;
+}
+
+
+/*Se centra la tabla de la página, se le da formato a los bordes*/
+
+.contenedor table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+
+/*Se le da formato a las celdas de la tablas de la página*/
+
+.contenedor td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+/*Se le da formato a los encabezados de la tablas de la página*/
+
+.contenedor th {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+/*Se le da formato al hiperenlace de la página*/
+
+.contenedor a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #479ead;
+}
+
+
+/*Se le da un fondo a los registros de la tabla de los vehiculos tipo Van*/
+
+.familiaVan {
+    background-color: #e1e3e3;
+}
+
+
+/*Estilo de las cabeceras vacías de la página*/
+
+#cabecera {
+    border: 0;
+    background-color: transparent;
+}
+
+
+/*Estilo de las celdas de datos vacías de la página*/
+
+#dato {
+    border: 0;
+}
+
+
+/* Estilo que deja centrado un elemento*/
+
+.centrado {
+    align-content: center;
+    margin: auto;
+}

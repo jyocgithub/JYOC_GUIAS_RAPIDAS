@@ -1,0 +1,69 @@
+/*
+    Curso: 2020/2021
+    Asignatura: DWES
+    Unidad de Trabajo 7 - DWES07 Ejercicio 1
+    Autor: Borja Sainz Ansoleaga
+*/
+
+
+/*Se le da un estilo general al body de la página*/
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial;
+    background-color: #f1f3f1;
+}
+
+
+/*Se le da un estilo al contenedor de la página web*/
+
+.contenedor {
+    margin: 0 auto;
+    width: 50%;
+    /* background-color: yellow; */
+    margin-top: 80px;
+}
+
+
+/*Se le da un estilo al título de la página*/
+
+h1 {
+    margin: 0;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+}
+
+
+/*Se le da un estilo a a caja del formulario*/
+
+.formulario {
+    padding: 40px;
+    /* border: 2px solid #157114; */
+    background-color: rgb(178, 219, 227);
+}
+
+
+/*Se le da un estilo a la caja del encabezado*/
+
+.encabezado {
+    background-color: #1ea7b1;
+    color: white;
+    /* border-top: 2px solid #157114;
+    border-left: 2px solid #157114;
+    border-right: 2px solid #157114; */
+}
+
+#respu {
+    padding-top: 15px;
+    color: rgb(18, 91, 104);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*Estilo para el botón insertar*/
+
+#calcular {
+    padding: 10px 15px;
+}

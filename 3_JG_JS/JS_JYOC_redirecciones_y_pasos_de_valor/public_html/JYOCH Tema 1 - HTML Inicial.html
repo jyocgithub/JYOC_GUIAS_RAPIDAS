@@ -1,0 +1,632 @@
+<!DOCTYPE html>                                        <!-- Define que es un documento HTML -->
+<html lang="en-US">                                    <!-- root element of an HTML page -->
+     <head>                                         <!-- contains meta information about the document -->
+          <title>TODO supply a title</title>     <!-- specifies a title for the document -->
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+     <body>                                         <!--element  contains the visible page content -->
+
+          *************************************************************<br>
+          ******************* BASICOS ***************************<br>
+          *************************************************************<br>
+          <br> Realiza un salto de linea. Si no, HTML no pone ninguno salvo elementos especiales.
+
+          <h1>This is heading 1 (tamaño maximo)</h1>
+          <h2>This is heading 2</h2>
+          <h6>This is heading 6 (tamaño minimo)</h6>
+
+          <div>PRIMER DIV</div>
+
+          <a href="http://www.google.com">Esto es un link</a><br>
+
+          Aqui detras va un salto de linea <br>
+          Otra manera identica de salto de linea <br/>
+
+          Aqui ahora va una imagen <br>
+          <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"><br>
+          <p>Esto es un paragraph.</p>
+
+          <p id="p1">
+               Esto es un paragraph con etiquetas indentadas
+          </p>
+
+          *************************************************************<br>
+          ******************* ATRIBUTOS MAS COMUNES ****************<br>
+          *************************************************************<br>
+
+          ******************* TITLE (TOOLTIP) ***********************<br>
+          <p title="Title se muestra como un tooltip">
+               Texto con tooltip.
+          </p>
+
+          ******************* HREF ***********************<br>
+          Se añade a la etiqueta (a). Indica el destino del enlace<br>
+          <a href="http://www.google.com">Esto es un link</a><br>
+
+          ******************* ID ***********************<br>
+          Indica el identificador unido del elemento
+          <p id="identificador1">Esto es un parrao con identificador</p><br>
+
+          ******************* STYLE ***********************<br>
+          Permite añadir un estilo al elemento indicado, usando notacion CSS
+          <h1 style="color:blue;">Esto es un titulo azul</h1>
+
+
+          *************************************************************<br>
+          ******************* ELEMENTOS ****************<br>
+          *************************************************************<br>
+
+          ******************* PRE ***********************<br>
+          PRE muestra su contenido preservando espacios y saltos de linea originales<br>
+          <pre>
+			Una linea nueva
+			Otra linea
+			Salen todas con saltos de linea
+          </pre>
+
+          ******************* FORMATO DE TEXTO ***********************<br>
+          Se pueden aplicar estas etiquetas a cualquier parte de contenido :
+          <pre>
+			b       - Bold text
+			strong  - Important text
+			i       - Italic text
+			em      - Emphasized text
+			mark    - Marked text
+			small   - Small text
+			del     - Deleted text
+			ins     - Inserted text
+			sub     - Subscript text
+			sup     - Superscript text
+			q       - Añade unas comillas
+          </pre>
+
+          ******************* LINKS **********************<br>
+          Enlace con otra pagina o llamada a otro fichero
+          <a href="https://www.google.com">Enlace a Google</a>
+          <a href="https://www.google.com" target="_blank"  >Enlace se abre en nueva pagina o tab </a> 
+          <a href="https://www.google.com" target="_self"   >Enlace se abre en la misma pagina o tab </a> 
+          <a href="https://www.google.com" target="_parent" >Enlace se abre en la ventana padre </a> 
+          <a href="https://www.google.com" target="_top"    >Enlace se abre a pagina completa </a> 
+          <a href="https://www.google.com" target="nombreframe"    >Enlace se abre en el frame nombreframe</a> 
+
+          Opcionalmente, con una etiqueta "a" tambien puedo DESCARGAR un contenido (imagen, url, etc)
+          <a href="/images/imagen2.jpg" download>Descarga aqui esta imagen</a>
+
+          ******************* IMAGENES **********************<br>
+          atributos de (img)
+          * src - Identifica el nombre de la imagen. Puede ser una URI o tener path<br>
+          * alt - TExto que se muestra si no se puede cargar la imagen<br>
+          * style - estilo css aplicable a la imagen. Puede contener multiples atributos<br>
+          * width y height - alto y ancho. Preferible usar style<br>
+
+          <img src="unaimagen.png" 
+               alt="Imagen no se ha podido cargar" 
+               style="width:128px;height:128px;"
+               width="128" 
+               height="128">
+
+          Asi se usa una imagen como un link:
+          <a href="default.asp">
+               <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+          </a>
+
+          <p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+               Esta imagen se ubica flotando a la derecha de este texto</p>
+
+          Un mapa de imagen permite que se puedan seleccionar selectivamente areas de una imagen, asi;
+          <img src="planetas.png" usemap="#planetamap" style="width:145px;height:126px;">
+          <map name="planetamap">
+               <area shape="rect"   coords="0,0,82,126" alt="Sol"      href="sol.htm">
+               <area shape="circle" coords="90,58,3"    alt="Mercurio" href="mercurio.htm">
+               <area shape="poly"   coords="124,58,8,3,11,12"   alt="Venus"    href="venus.htm">
+          </map>
+
+
+
+          ******************* TABLAS **********************<br>
+          Se crean usando estas Etiquetas:
+          * (tr)(/tr) Inicia y acaba una fila
+          * (th)(/th) Inicia y acaba una cabecera de columnas, debe usarse dentro de una fila
+          * (td)(/td) Inicia y acaba una columna, debe usarse dentro de una fila
+          Un (td) actua como contenedor de datos de la tabla, y puede contener elementos HTML: text, images, lists, tables, etc.
+
+          <table style="width:100%">
+               <caption>Titulo de la tabla</caption>
+               <tr>
+                    <th>NOMBRE</th>
+                    <th>EDAD</th>
+               </tr>
+               <tr>
+                    <td>Ana</td>
+                    <td>50</td>
+               </tr>
+               <tr>
+                    <td>Petra</td>
+                    <td>94</td>
+               </tr>
+               <tr>
+                    <td  colspan="2">dos celdas unidas</td>
+               </tr>
+          </table>
+
+          ******************* LISTAS **********************<br>
+          UL Unordered Lists son listas con viñetas no ordenadas
+          <ul style="list-style-type:circle">
+               <li>Pera</li>
+               <li>Uva</li>
+               <li>Manzana</li>
+          </ul>
+
+          OL Unordered Lists son listas con viñetas numericas u otro orden indicado por type:
+          1 - ordinal numerico
+          A - ordinal alfabetico mayusculas
+          a - ordinal alfabetico minusculas
+          I - ordinal numeros romanos mayusculas
+          i - ordinal numeros romanos mayusculas
+
+          <ol type="1">
+               <li>Pera</li>
+               <li>Uva</li>
+               <li>Manzana</li>
+          </ol>
+
+          Se puede hacer una lista vertical aplicando estilos
+
+
+
+          ************* ELEMENTOS CONTENEDORES. DIV Y SPAN **********************<br>
+          *--------------  CONTENEDORES DE BLOQUE. Caracteristicas;
+          - Se inician en una linea nueva
+          - Cogen todo el ancho que tengan disponible
+          Son:
+          - (div)
+          - (h1) .. (h6)
+          - (p)
+          - (form)
+          *-------------- CONTENEDORES DE LINEA. Caracteristicas;
+          - NO inicia una linea nueva
+          - Cogen solo el ancho que necesitan
+          Son:
+          - (span)
+          - (a)
+          - (image)
+
+          *-------------- DIV
+          Se usa como contenedor de otros elementos, a menudo para unificar 
+          varios elementos con el mismo estilo, que se aplica al DIV
+          No tiene atributos propios, aunque STYLE y CLASS si son habituales
+
+          *-------------- SPAN
+          Igual que DIV, solo que suele contener simplemente texto
+
+
+          ******************* IFRAME **********************<br>
+          Un iFrame se usa para mostrar una web dentro de otra web
+
+          <iframe src="nuevaURL"></iframe>
+          <iframe src="demo_iframe.htm" 
+                  height="200" 
+                  width="300"
+                  style="border:none;"
+                  style="border:2px solid grey;">
+          </iframe>
+
+          Se puede usar un iFrame como el destino de un link:
+          <iframe src="nuevapagina.html" name="iframe_1"></iframe>
+          <p><a href="https://es.wikipedia.org/" target="iframe_1">Aqui se abre wikipedia</a></p>
+
+          ******************* ENTITY **********************<br>
+          Una entity es un caracter que no se puede representar directamente en HTML,
+          bien por que son caracteres reservados de HTML o que no se pueden representar 
+          Se pueden representar de dos formas:
+          - un & seguido de un acronimo
+          _ un &# seguido de un numero
+
+          Ejemplos
+          &nbsp;         Se refiere a NonBreakingSpace y 
+          non-breaking space	&nbsp;	&#160;
+          vale para indicar al navegador que no puede hacer salto de linea p.e. para escribir 12 PM
+          <	less than                    &lt;	&#60;
+          >	greater than                 &gt;	&#62;
+          &	ampersand                    &amp;	&#38;
+          "	double quotation mark        &quot;	&#34;
+          '	single quotation mark        &apos;	&#39;
+          ¢	cent                         &cent;	&#162;
+          £	pound                        &pound;	&#163;
+          ¥	yen                          &yen;	&#165;
+          €	euro                         &euro;	&#8364;
+          ©	copyright                    &copy;	&#169;
+          ®	registered trademark         &reg;	&#174;
+          ´     tilde                        &#768;	
+          ́	  `     tilde grave                  &#769;	
+          ̂      circunflejo                  &#770;	
+
+
+          ******************* FORMS (FORMULARIOS) **********************<br>
+          Un form es un formulario de introduccion de datos, que pueden ser :
+          - Etiqueta INPUT, y su parametro type con diferentes valores:
+          * text
+          * password
+          * submit
+          * reset
+          * check box
+          * (varios mas añadidos por HTML5)
+          - Etiqueta SELECT
+          - Etiqueta TEXT AREA
+          - Etiqueta BUTTON
+          - Etiqueta DATALIST (solo HTML5)
+          - Etiqueta FIELDSET y LEGEND (se pueden usar tambien sin formulario)
+
+          <form  action="nuevapagina.html" >
+
+               *----  INPUT TYPE      (etiqueta)
+               *--  input type TEXT
+               Pide un TEXTO NORMAL en una caja normal
+               "value" es el valor que inicialmente aparece en la caja
+               <input type="text" value="valorinicial" name="nNombre"><br> 
+
+               *--  input type  PASSWORD
+               Pide un texto que al escribir no se muestra, es tipo "PASSWORD"
+               "value" es el valor que inicialmente aparece en la caja (aunque no se vea bien :-)
+               <input type="password" value="valorinicial" name="nNombre"><br>  
+
+               *--  input type  RADIO
+               Ponen varios RADIO BUTTON
+               Para que sean exclusivos entre si han de llevar el mismo "name"
+               El texto de cada radio se pone tras la etiqueta "radio"
+               Si un radio lleva el atributo "checked" (sin valor) es el que sale marcado por defecto
+               El "value" se usa posteriormente para devolver un valor al analizar que opcion esta marcada
+               <input type="radio" name="sexo" value="hombre" checked> Hombre<br>
+               <input type="radio" name="sexo" value="mujer"> Mujer<br>
+               <input type="radio" name="sexo" value="otro"> Otros
+
+               *--  input type  SUBMIT
+               Muestra un BOTON DE ENVIO, que normalmente envia el formulario a un form-handler
+               Un form-handler es normalmente una pagina nueva que con un script procesa los datos
+               Esta nueva pagina a la que se traspasa la navegacion esta en 
+               el atributo ACTION de la etiqueta FORM (ver mas arriba)
+               El "value" aqui es el texto que aparece en el boton
+               <input type="submit" value="Submit">
+
+               *--  input type  RESET
+               Eso muestra un boton RESET, que lo que hace es borrar todos los datos del form
+               El "value" aqui es el texto que aparece en el boton
+               <input type="reset" value="borrar todo">
+
+               *--  INPUT CHECKBOX
+               Asi se muestra un CHECK BOX. 
+               El texto se pone tras la etiqueta "checkbox"
+               Si un checkbox lleva el atributo "checked" (sin valor) sale marcado por defecto
+               El "value" se usa posteriormente para devolver un valor al analizar que opcion esta marcada
+               <input type="checkbox" name="nAceptar" value="1"> Acepto las condiciones<br>
+
+               *--  input type  BUTTON
+               Asi se muestra otro tipo de BOTON
+               La diferencia es que este define que accion hay que hacer al pulsarlo
+               mientras que con SUBMIT la accion se define en la etiqueta FORM.
+               Este boton esta pensado para acciones que no "concluyan" el formulario.
+               La accion se ha de incluir como un evento de accion (onCLick o similar, ver mas adelante)
+               El "value" aqui es el texto que aparece en el boton
+               <input type="button" onclick="alert('Hola!')" value="Pulsa y te saludo">
+
+               *--  input type  IMAGE
+               Casi igual que un type BUTTON, pero con aspecto de imagen
+               El atributo "src" indica de donde se extrae la imagen
+               <input type="image" src="caja.png" onclick="alert('Hola!')" >
+
+               *--  input type  HIDDEN
+               Control que sirve al programador para enviar algún dato al servidor de forma invisible al usuario
+               <input type="hidden" value="texto oculto al usuario"><br><br><br><br><br><br>
+
+               <br><br><br><br><br><br>
+               HTML5 ha añadido mas valores para el type de INPUT:<br>
+
+               *--  input type  COLOR<br>
+               Muestra un boton para elegir color, que dependiento del navegador, puede mostrar
+               un cuadro de dialogo para elegir color.
+               <input type="color" name="favcolor" value="#ff0000">br>
+                        
+               *--  input type  TIME<br>
+               Muestra un boton para elegir una hora y minutos, que dependiento del navegador, puede mostrar
+               un cuadro de dialogo para elegirlos.
+               <input type="time" name="hora" >br>
+                     
+               *--  input type  DATE<br>
+               Muestra un cuadro para elegir una fecha, permitiendo solo valores correctos
+               Opcionalmente, dependiento del navegador, puede mostrar un boton 
+               que abre un cuadro de dialogo para elegir fecha.
+               <input type="date" name="unafecha">br>
+               Los atributos max y min pueden hacder restricciones al valor a introducir:
+               Fecha anterior a 01-01-1980-: <input type="date" name="fecha1" max="1979-12-31"><br>
+               Fecha posterior a 01-01-2000: <input type="date" name="fecha2" min="2000-01-02"><br>
+
+               *--  input type  DATETIME-LOCAL<br>
+               Parecido a DATE, solo que ademas de fecha pide la hora 
+               <input type="datetime-local" name="unafecha">br>
+
+               *--  input type  EMAIL<br>
+               Mustra un campo para escribir un email
+               La mayoria de los navegadores valida el formato del texto como email
+               <input type="email" name="dircorreo">
+     
+               *--  input type  URL<br>
+               Mustra un campo para escribir una direccion URL
+               La mayoria de los navegadores valida el formato del texto como URL
+               <input type="url" name="pagina">
+     
+               *--  input type  MONTH<br>
+               Muestra un boton para elegir un mes y un año.
+               Dependiento del navegador, puede mostrar un cuadro de dialogo para elegir fecha.
+               <input type="month" name="mes">br>
+
+               *--  input type  WEEK<br>
+               Parecido a MONTH, solo que aqui pide una semana y un año 
+               <input type="week" name="unafecha">br>
+            
+               *--  input type  NUMBER<br>
+               Muestra un control para elegir un valor, en la mayoria de navegadores, con un control
+               que aumenta o disminuye el valor usando botones<br>
+               Puede indicarse el maxiom y el minimo, yel valor inicial, y el salto entre valores:
+               <input type="number" name="cantidad" min="1" max="16" step="3">
+               
+               *--  input type  RANGE
+               Muestra un control para elegir un valor, como un control deslizante
+               El valor en si no es importante, pues no se ve.
+               El minimo y maxio por defecto son 0 y 100, aunque se puede modificar, 
+               asi como el "salto" del desplazamiento,
+               Puede indicarse tambien el valor inicial
+               <input type="range" name="cantidad" min="1" max="1" step="2" value="8">
+
+               *--  input type  SEARCH
+               Muestra una caja para escribir un valor de busqueda
+               Se comporta como un texto normal, y algunos navegadores añaden boton de borrar o retroceder
+               <input type="search" name="buscar">
+
+               *--  input type  COLOR
+               Eso muestra un boton RESET, que lo que hace es borrar todos los datos del form
+               El "value" aqui es el texto que aparece en el boton
+               <input type="reset" value="borrar todo">
+
+               *--  input type  COLOR
+               Eso muestra un boton RESET, que lo que hace es borrar todos los datos del form
+               El "value" aqui es el texto que aparece en el boton
+               <input type="reset" value="borrar todo">
+
+
+               * date
+               * datetime-local
+               * email
+               * month
+               * number
+               * range
+               * search
+               * tel
+               * time
+               * url
+               * week
+
+
+               *---- SELECT (etiqueta)
+               Usado para crear listas desplegables
+               Cada opcion va en una etiquta option
+               Si una lleva el atributo "selected" (sin valor) sale seleccinado por defecto
+               El texto de cada opciom se pone entre las etiquetas "opcion"
+               <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected>Fiat</option>
+                    <option value="audi">Audi</option>
+               </select>
+
+               *---- TEXT AREA (etiqueta)
+               <textarea name="message" rows="10" cols="30">
+                    The cat was playing in the garden.
+               </textarea>
+
+               *---- BUTTON (etiqueta)
+               Practicamente identico a un input con type="button", solo que el texto 
+               a mostrar en el boton está entre etiquetas "button" (mas facil para darle estilo)
+               <button type="button" onclick="alert('Hola!')" >Pulsa y te saludo</button>
+
+               *---- DATALIST (etiqueta)
+               Se trata de una lista en la que el usuario puede escribir para ir filtrando los resultados
+               Se crea con dos etiquetas, una input-list y un datalist
+               El valor de input-list ha de coincidir con el id del datalist (paises en el ejemplo)
+               <input list="paises" name="dlPaises">
+               <datalist id="paises">
+                    <option value="Francia">
+                    <option value="Alemania">
+                    <option value="Italia">
+                    <option value="Belgica">
+                    <option value="Portugal">
+               </datalist>
+
+               *---- FIELDSET (etiqueta, aunque se puede usar tambien sin formulario)
+               Actua como contenedor. Muestra su contenido enmarcado en un cuadro con titulo (identificado con LEGEND)
+               <fieldset>
+                    <legend>Datos de identificacion:</legend>
+                    Nombre:<br>  <input type="text" name="nNombre" value=""><br>
+                    Edad:<br>    <input type="text" name="nEdad" value=""><br><br>
+                    <input type="submit" value="Submit">
+               </fieldset>        
+
+               *---- LABEL (etiqueta, aunque se puede usar tambien sin formulario)
+               Aplica un texto a un componente, de modo que si se pincha en la etiqueta es como si 
+               se hubiera pinchado en el componente (por ejemplo, para option button)
+               Para asociarse al componente, ha de tener un atributo "for" que ha de ser igual al atributo "id" 
+               del elemento con el que se enlaza
+               <label for="idDia">Dia</label>
+               <input type="radio" name="fase" id="idDia" value="dedia"><br>
+               <label for="idNoche">Noche</label>
+               <input type="radio" name="fase" id="idNoche" value="denoche"><br>
+
+               ******************************************************************************************
+               Ademas, casi todos estos elementos usan varios atributos, ademas de los vistos,
+               para controlar y validar la informacion que se procesa en el formulario
+
+
+               *----  ID     (atributo)
+               Identifica el elemento. Se puede usar sin enviar el formulario, en un javascript p.e.
+               <input type="text" name="nombre" id="idNombre">
+
+               *----  NAME     (atributo)
+               Identifica el elemento sobre todo cuando se envia el formulario. Lo necesita GET y POST.
+               Un elemento sin ^name^ no se envia por GET o POST
+               Ademas, vale para agrupar varios elementos RADIO, que pueden tener luego ID diferente
+               <input type="text" name="nombre" id="idNombre">
+
+               *----  VALUE     (atributo)
+               Especifica el valor inicial para un campo de entrada, o si la entrada ya 
+               esta definida, se puede usar posteriormente para devolver un valor que no es la entrada en si
+               <input type="text" name="nombre" value="Luis">
+               <input type="checkbox" name="nAceptar" value="1"> Acepto las condiciones<br>
+
+               *----  READONLY     (atributo)
+               Hace que el campo de entrada sea de solo lectura
+               <input type="text" name="nombre" value="Luis" readonly>
+
+               *----  DISABLED     (atributo)
+               Un campo editable en modo disabled se ve (en gris) pero no se puede interactuar 
+               con el y no es enviado al destino
+               <input type="text" name="nombre" value="Luis" disabled>
+
+               *----  SIZE     (atributo)
+               Indica el tamaño (en chars) del campo a editar (aunque se pueda escribir mas chars en el)
+               <input type="text" name="nombre" value="Luis" size="30">
+
+               *----  MAXLENGTH     (atributo)
+               Indica el numero maximo de chars que admite el campo a editar 
+               <input type="text" name="nombre" value="Luis" maxlength="20">
+
+               *----  MIN y MAX      (atributo)
+               Indica los valores maximo y minimo para cualquier campo a editar 
+               Funciona con estos input-types: number, range, date, datetime-local, month, time y week.
+               Enter a date before 1980-01-01:  <input type="date" name="bday" max="1979-12-31">
+               Enter a date after 2000-01-01: <input type="date" name="bday" min="2000-01-02">
+               Quantity (between 1 and 5):  <input type="number" name="quantity" min="1" max="5">
+
+               *----  MULTIPLE      (atributo)
+               The multiple attribute specifies that the user is allowed to enter more than one value in the INPUT element.
+               The multiple attribute works with the following input types: email, and file
+
+               *----  PATTERN      (atributo)
+               The pattern attribute specifies a regular expression that the (input) element's value is checked against.
+               The pattern attribute works with the following input types: text, search, url, tel, email, and password.
+               Tip: Use the global title attribute to describe the pattern to help the user.
+               Country code: <input type="text" name="prefijoprovincia" pattern="[A-Za-z]{3}" title="Escriba solo tres letras">
+
+               *----  PLACEHOLDER      (atributo)
+               Muestra una "pista" sobre lo que debe llevar el campo. El texto indicado en PLACEHOLDER se muestra
+               en el campo del formulario, hasta que el usuario escribe en el campo, momento en el que se borra
+               Funciona con estos input types: text, search, url, tel, email, y password.
+               <input type="text" name="nombre" placeholder="(escriba aqui su nombre)">
+
+               *----  REQUIRED      (atributo)
+               Indica que el campo es obligatorio
+               <input type="text" name="nombre"required>
+
+               *----  STEP      (atributo)
+               Identifica los "saltos" que dan los valores que se solictan en algunos campos presentados
+               The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+               <input type="number" name="valores" step="3">
+
+               *----  AUTOFOCUS     (atributo)
+               The autofocus attribute specifies that the input field should automatically get focus when the page loads.
+               <input type="text" name="nombre" value="Luis" maxlength="20" autofocus>
+
+               *----  FORM     (atributo)
+               Permite que un elemento se incluya en un form aunque no este dentro de las etiquetas,
+               o que un elemento dentro de las etiquetas de un form pertenezca realmente a otro
+               To refer to more than one form, use a space-separated list of form ids.
+               <form action="otra.html" id="form1">
+                    Nombre: <input type="text" name="nNombre"><br>
+                    <input type="submit" value="Enviar">
+               </form>
+               Apellidos: <input type="text" name="nApellidos" form="form1">
+
+               *----  FORMACTION   (atributo)
+               The formaction attribute specifies the URL of a file that will process the input control when the form is submitted.
+               The formaction attribute overrides the action attribute of the ^form^ element.
+               The formaction attribute is used with type="submit" and type="image".
+               So, an HTML form can use two submit buttons, with different actions:
+               <form action="/recibir.php">
+                    Nombre: <input type="text" name="nNombre"><br>
+                    Apellidos: <input type="text" name="nApellidos">
+                    <input type="submit" value="Envio"><br>
+                    <input type="submit" formaction="/recibircopia.php" value="Reenviar">
+               </form>
+
+               Para usar junto a casos como el anterior, donde hay difeerntes botones con diferentes destino de envio, 
+               existen otros atributos como :
+               *----  FORMMETHOD   (atributo)
+               FORMMETHOD permite aplicar diferentes metodos de envio para cada medio de envio
+               *----  FORMNOVALIDATE   (atributo)
+               FORMNOVALIDATE permite que alguno de los modos de envijo no valide los datos al enviarlos
+               *----  FORMTARGET   (atributo)
+               FORMTARGET permite tener diferentes modos de apertura del nuevo destino (_blank, _self, etc)
+
+
+               ******************************************************************************************
+               Ademas, la etiqueta FORM tiene unos atributos propios
+
+               *---- ACTION     (atributo, para la etiqueta FORM)
+               El atributo ACTION define que accion se realiza cuan el formiulario es enviado
+               Normalmente, el formulario se envia a otra pagina html o a un servidor
+               Y normalmente se envia cuando se pincha en un boton submit (un input-submit)
+               <form action="otrapagina.html">...</form>
+               <form action="/action_page.php">...</form>
+
+               Si no se indica ningun atributo ACTION, el formulario se envia a la propia pagina
+
+               *---- METHOD      (atributo, para la etiqueta FORM)
+               The method attribute specifies the HTTP method (GET or POST) to be used when submitting the form data:
+               <form action="/action_page.php" method="get">...</form>
+               <form action="/action_page.php" method="post">...</form>
+
+               Si no se indice METHDO se toma GET por defecto
+
+               Usar GET hace que la informacion enviada se vea en la propia URL de envio
+               No se debe usar si la informacion es sensible o si es mucha (tiene mucha limitacion de espacio)
+
+               Usar POST hace que no se vea la informacion enviada y no tiene limite de espacio
+
+               *----  AUTOCOMPLETE     (atributo, para la etiqueta FORM o UN ELEMENTO)
+               The autocomplete attribute specifies whether a form or input field should have autocomplete on or off, dandole valor on u off
+               When autocomplete is on, the browser automatically complete the input values based on values that the user has entered before.
+               Tip: It is possible to have autocomplete "on" for the form, and "off" for specific input fields, or vice versa.
+               The autocomplete attribute works with the following "input" types: text, search, url, tel, email, password, datepickers, range, and color.
+               In some browsers you may need to activate the autocomplete function for this to work.
+               <form action="/action_page.php" autocomplete="on">
+                    Nombre:<input type=^"text" name="nNombre"><br>
+                    Edad:  <input type="text" name="nEdad"><br>
+                    E-mail: <input type="email" name="nEmail" autocomplete="off"><br>
+                    <input type="submit">
+               </form>   
+
+               *----  NOVALIDATE     (atributo, para la etiqueta FORM)
+               novalidate specifies that the form data should not be validated when submitted.
+               <form action="/action_page.php" novalidate>
+                    E-mail: <input type="email" name="user_email">
+                    <input type="submit">
+               </form>
+
+               *----  ENCTYPE      (atributo, para la etiqueta FORM)
+               Formato en el que se enviarán los datos al servidor (válido para method=“post”).
+               Valores : application/x-www-form- urlencoded, multipart/form-data o text/plain
+               <form action="/action_page.php" enctype="text/plain">
+                    E-mail: <input type="email" name="user_email">
+                    <input type="submit">
+               </form>
+
+               *----  ACCEPT-CHARSET   (atributo, para la etiqueta FORM)
+               Especifica el juego de caracteres con el que son enviados los datos del formulario.
+               Valores normales: UTF-8 - Codificacio Unicodem, ISO-8859-1 - Codificación de alfabetao latino
+               <form action="/action_page.php" accept-charset=“UTF-8”>
+                    E-mail: <input type="email" name="user_email">
+                    <input type="submit">
+               </form>
+
+
+
+          </form>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>TODO supply a title</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+     <body>
+          <script>
+               window.onload = function () {
+                    var url = document.location.href;
+                    var params = url.split('?')[1].split('&');
+                    var data = {};
+                    var tmp;
+                    var longitud = params.length;
+                    for (var i = 0; i < longitud; i++) {
+                         tmp = params[i].split('=');
+                         data[i] = tmp[1];
+
+                    }
+                    var nombrerecibido = data[0];
+                    var preciorecibido = data[1];
+
+                    document.getElementById('idnombre').innerHTML = nombrerecibido;
+                    document.getElementById('idivatotal').innerHTML = preciorecibido;
+
+                    var elotrovalor = sessionStorage.getItem('otrovalor')
+                    document.getElementById('idotroval').innerHTML = elotrovalor;
+               }
+          </script>
+
+          HOLA SEÑOR       <label id="idnombre"></label><br>
+          EL IMPORTE CALCULADO CON 21 DE IVA ES        <label id="idivatotal"></label><br>
+          EL OTRO VALOR ES          <label id="idotroval"></label><br>
+     </body>
+</html>

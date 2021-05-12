@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>TODO supply a title</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script type="text/javascript">
+
+               function pasarPagina() {
+                    var nom = document.getElementById('nombre1').value;
+                    var num = parseInt(document.getElementById('importe1').value);
+                    num = num * 1.21;
+                    var var2 = num.toString();
+                    var url = 'JYOCH Ejempo Javascript con paso valor entre paginas (I) Destino.html?var1=' + nom + "&var2=" + var2;
+                    
+                    // otra manera con sessionStorage (tb se puede con localStorage)
+                    sessionStorage.setItem('otrovalor', 'elvalorapasar')
+                    var a = document.createElement("a");
+                    a.target = "_blank";
+                    a.href = url;
+                    a.click();
+               }
+          </script>
+     </head>
+     <body>
+          <form  id="form1" name="selecionIngredientes" onSubmit="pasarPagina()">
+               PRUEBA DE ENVIO DE VARIABLES ENTRE PAGINAS HTML<br>
+               Nombre: <input type="text" id="nombre1"><br><br>
+               Importe sin iva: <input type="text" id="importe1"><br><br>
+               <input type="submit"  value="Seguir"><br>
+          </form>
+     </body>
+</html>
+
+
+
+
+
+
+
+

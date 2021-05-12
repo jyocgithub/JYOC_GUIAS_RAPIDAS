@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script>
+               // variable global de precio
+
+               // funcion calcular precio segun lo seleccionado
+               function calcular() {
+                    var precio = 0;
+                    var v = 0;
+                    // ---- Extraer que elemento esta elegido en el DROP-DOWN LIST:
+                    v = parseInt(document.getElementById('sabores').value);
+                    precio = precio + v;
+
+                    // ---- Ver que elemento se ha elegido en un RADIO OPTION:
+                    if (document.getElementById('m1').checked) {
+                         v = parseInt(document.getElementById('m1').value);
+                         precio = precio + v;
+                    }
+                    if (document.getElementById('m2').checked) {
+                         v = parseInt(document.getElementById('m2').value);
+                         precio = precio + v;
+                    }
+                    if (document.getElementById('m3').checked) {
+                         v = parseInt(document.getElementById('m3').value);
+                         precio = precio + v;
+                    }
+
+                    // ---- Ver si un elemento se ha elegido en un CHECK BOX:
+                    if (document.getElementById('doblequeso').checked) {
+                         precio = precio + parseInt(document.getElementById('doblequeso').value);
+                    }
+
+                    // ---- ponemos el precio en el paragraph necesario:
+                    document.getElementById("par1").innerHTML = "Precio : " + precio;
+               }
+
+               function pasarPagina() {
+                    var b = document.getElementById('name').value;
+                    var url = 'JYOCH Tema4 Pagina Prueba Destino.html?var1=' + encodeURIComponent(b);
+                    document.location.href = url;
+               }
+
+          </script>
+     </head>
+     <body>
+
+          <form  id="form1" name="selecionIngredientes" method="GET" action="JYOCH Tema4 Pagina Prueba Destino.html?101,102,casa,nombre">
+
+               AQUI VA UN DROPDOWN LIST DE CUATRO OPCIONES<br>
+               <select id="sabores" onchange="calcular()">
+                    <option value="1">Napolitana 1€</option>
+                    <option value="2">4 Quesos 2€</option>
+                    <option value="2">Hawaiana 2€</option>
+                    <option value="5">Especial de la casa 5€</option>
+               </select><br><br>
+
+               AQUI VA UN RADIO OPTION DE TRES OPCIONES<br>
+               <input type="radio" name="masas" value="1" id="m1" onclick="calcular();"> Masa fina 1€<br>
+               <input type="radio" name="masas" value="2" id="m2" onclick="calcular();"> Masa doble 2€<br>
+               <input type="radio" name="masas" value="4" id="m3" onclick="calcular();"> Hojaldre 4€<br><br>
+
+
+               AQUI VA UN CHECKBOX DE UNA OPCION<br>
+               <input type="checkbox" id="doblequeso" value="1" onclick="calcular();" >Doble de queso 1€<br><br>
+
+
+               Este texto debe cambiar al pulsar en cada opcion y hacer su onclick()
+               <p id="par1">Precio : </p><br><br><br>
+
+
+               <input type="submit" value="seguir"><br>
+
+               <!--<a href='JYOCH Tema4 Pagina Prueba Destino.html?var1=101&var2=102'>a link</a>-->
+               <!--<a href='JYOCH Tema4 Pagina Prueba Destino.html?101,102,casa,nombre'>a link</a>-->
+          </form>
+     </body>
+</html>
+
+
+
+
+
+
+
+

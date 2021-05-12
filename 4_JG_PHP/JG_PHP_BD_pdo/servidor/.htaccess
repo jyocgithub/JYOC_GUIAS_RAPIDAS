@@ -1,0 +1,16 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# mapeamos la url que se recibe hacia nuestro fichero php con las funciones requeridas
+# Viene a decir:
+# "todo lo que se reciba como .../factorial/ seguido de algo, se envia realmente a RestController.php?factor= y ahi se pone el primer parameteo ($1) de ses algo"
+# Los flags posteriores significan:   
+#   nc   No Case:  sin distinción entre mayúsculas y minúsculas. Es decir, no importa si las letras aparecen en mayúsculas o minúsculas en el URI coincidente.
+#   qsa  qsapped: asegura que se añaden y sustituyen los parámetros de la primera regla en la segunda regla.
+
+RewriteRule "^factorial/?"   "RestController.php?factor=$1" [nc,qsa]
+RewriteRule "^primo/?"       "RestController.php?prim=$1"   [nc,qsa]
+
+
+

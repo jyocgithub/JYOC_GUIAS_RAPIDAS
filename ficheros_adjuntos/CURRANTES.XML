@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_empleados>
+    <currante codigo="1">
+        <nombre>pepe</nombre>
+        <direccion>pez</direccion>
+        <salario>10000.0</salario>
+        <comision>100.0</comision>
+    </currante>
+    <currante codigo="2">
+        <nombre>Luis</nombre>
+        <direccion>pan</direccion>
+        <salario>5562.0</salario>
+        <comision>100.0</comision>
+    </currante>
+    <currante codigo="3">
+        <nombre>Eva</nombre>
+        <direccion>coast</direccion>
+        <salario>235.0</salario>
+        <comision>100.0</comision>
+    </currante>
+</lista_empleados>

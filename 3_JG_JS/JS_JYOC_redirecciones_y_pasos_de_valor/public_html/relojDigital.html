@@ -1,0 +1,88 @@
+<html>
+     <head>
+     </head>
+     <body>
+          EJEMPLO 1: REDIRECCION CON UN ENLACE HTML<br>
+          <a href='https://elpais.com/'>Redireccion 1: Pincha en el enlace e iras a la portada de El Pais</a><br>
+
+          EJEMPLO 2: REDIRECCION DESDE UNA FUNCION JAVASCRIPT LLAMADA CON UN BOTON HTML<br>
+          <p>Pincha en el enlace e iras a la portada de La Vanguardia</p>
+          <form>
+               <input type="button" value="Redireccion 2" onclick="Redireccion2();" />
+          </form>
+          <script type="text/javascript">
+               function Redireccion2() {
+                    window.location = "http://www.lavanguardia.com/";
+//                  CUIDADO QUE NO FUNCIONA 
+//                  window.location = "www.elmundo.es";
+//                  Pues te envia a la pagina http://localhost:8383/ProyectoEjemplo/www.elmundo.es
+//                  Esto es, estas añadiendo una rama a tu propio dominio
+               }
+          </script>
+
+          EJEMPLO 3: REDIRECCION DESDE UNA FUNCION JAVASCRIPT CREANDO UN ENLACE ANONIMO (QUE NO SE VE EN EL HTML)<br>
+          <p>Pincha en el enlace e iras a la portada de El Mundo</p>
+          <form>
+               <input type="button" value="Redireccion 3" onclick="Redireccion3();" />
+          </form>
+          <script type="text/javascript">
+               function Redireccion3() {
+
+                    var enlaceanonimo = document.createElement("a");  // Se crea un elemento "a" (un enlace html)
+                    enlaceanonimo.target = "_blank";                  // Se le da la propiedad "donde abrir enlace"
+                    enlaceanonimo.href = "http://www.elmundo.es/";    // Se le da la propiedad "destino del enlace"
+                    enlaceanonimo.click();                            // Se actua ejecutando un click sobre el enlacec
+               }
+          </script>
+
+
+          EJEMPLO 4: REDIRECCION RETARDADA<br>
+          <p>Pincha en el enlace e iras a la portada de La Vanguardia tras unos segundos</p>
+          <form>
+               <input type="button" value="Redireccion 2" onclick="Redireccion4();" />
+          </form>
+          <script type="text/javascript">
+               function Redireccion4() {
+                    document.write("Seras redireccionado en tres segundos...");
+                    // setTimeout() ejecuta su primer parametro pasados los milisegundos de su segundo parametro
+                    setTimeout('Redireccion4final()', 3000);
+               }
+               function Redireccion4final() {
+                    window.location = "http://www.lavanguardia.com/";
+               }
+          </script>
+
+          
+          EJEMPLO 5: REDIRECCION SEGUN NAVEGADOR EN USO<br>
+          <p>Pincha en el enlace e iras a la portada de algun periodico....</p>
+          <form>
+               <input type="button" value="Redireccion 2" onclick="Redireccion5();" />
+          </form>
+          <script type="text/javascript">
+               function Redireccion5() {
+                    var tipoDeNavegador = navigator.appName;
+                    if (tipoDeNavegador == "Chrome")
+                    {
+                         window.location = "https://elpais.com/";
+                    } else if (tipoDeNavegador == "Microsoft Internet Explorer")
+                    {
+                         window.location = "http://www.elmundo.es/";
+                    } else
+                    {
+                         window.location = "http://www.lavanguardia.com/";
+                    }
+               }
+               function Redireccion4final() {
+                    window.location = "http://www.lavanguardia.com/";
+               }
+          </script>
+
+
+
+
+
+
+
+
+     </body>
+</html>

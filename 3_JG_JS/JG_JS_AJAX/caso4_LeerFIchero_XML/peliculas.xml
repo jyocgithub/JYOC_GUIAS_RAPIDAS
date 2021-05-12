@@ -1,0 +1,26 @@
+<series>
+    <serie>
+        <titulo>Serie1</titulo>
+        <cadena>HBO</cadena>
+        <director>USA</director>
+        <year>2000</year>
+        <terminada>Si</terminada>
+    </serie>
+
+    <serie>
+        <titulo>Serie2</titulo>
+        <cadena>Netflix</cadena>
+        <director>USA</director>
+        <year>2001</year>
+        <terminada>No</terminada>
+    </serie>
+
+    <serie>
+        <titulo>Serie3</titulo>
+        <cadena>Amazon</cadena>
+        <director>USA</director>
+        <year>2002</year>
+        <terminada>Si</terminada>
+    </serie>
+
+</series>

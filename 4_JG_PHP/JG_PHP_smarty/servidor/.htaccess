@@ -1,0 +1,9 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# map neat URL to internal URL
+RewriteRule ^descuento/?   RestController.php?cod=$1 [nc,qsa]
+
+
+

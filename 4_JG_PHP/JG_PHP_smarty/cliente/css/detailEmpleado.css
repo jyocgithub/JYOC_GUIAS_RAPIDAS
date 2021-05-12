@@ -1,0 +1,50 @@
+/*
+    Curso: 2020/2021
+    Asignatura: DWES
+    Unidad de Trabajo 5 - DWES05 Ejercicio 2
+    Autor: Borja Sainz Ansoleaga
+*/
+
+/*Formato general de la página mostrarDetalle*/
+.contenedor{
+    margin:0 auto;
+    width:40%;
+    padding:20px;
+    font-family:Arial;
+}
+
+/*Se centra la tabla de la página, se le da formato a los bordes*/
+.contenedor table{
+   border:1px solid black;
+   border-collapse:collapse;
+}
+
+/*Se le da formato a las celdas de la tablas de la página*/
+.contenedor td{
+   border:1px solid black;
+   padding:15px;
+}
+
+/*Se le da formato a los encabezados de la tablas de la página*/
+.contenedor th{
+   color:white;
+   background-color:black;
+   border:1px solid black;
+   padding:20px;
+}
+
+/*Se le da formato al hiperenlace de la página*/
+.contenedor a{
+    text-decoration:none;
+    font-weight:bold;
+    color:#479ead;
+}
+
+/*Se le da formato al mensaje de que no existen furgonetas*/
+#error{
+    background-color:red;
+    color:white;
+    padding:20px;
+    margin-top:30px;
+}
+

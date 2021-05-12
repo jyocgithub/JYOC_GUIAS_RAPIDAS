@@ -1,0 +1,56 @@
+<!DOCTYPE html>                              
+<html>                                       
+     <head>                                   
+          <title>TODO supply a title</title>   
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head> 
+     <body>                                   <!--element  contains the visible page content -->
+
+          <!--<script > Simplemente asi tambien se reconoce como Javascript    -->
+          <script type="text/javascript">
+               // variable global de precio
+
+               // funcion calcular precio segun lo seleccionado
+               function calcular() {
+                    precio = 0
+                    v=0;
+                    // vemos que elemento esta elegido en el DROP-DOWN LIST:
+                    v = parseInt(document.getElementById('sabores').value);
+                    precio = precio + v;
+                    // vemos si un elemento se ha elegido en un RADIO OPTION:
+                    if (document.getElementById('m1').checked) {
+                         v = parseInt(document.getElementById('m1').value);
+                         precio = precio + v;
+                    }
+                    if (document.getElementById('m2').checked) {
+                         v = parseInt(document.getElementById('m2').value);
+                         precio = precio + v;
+                    }
+                    if (document.getElementById('m3').checked) {
+                         v = parseInt(document.getElementById('m3').value);
+                         precio = precio + v;
+                    }
+                    
+                    if(document.getElementByName('doblequeso').checked) )
+                    
+                    // ponemos el precio en el paragraph necesario:
+                    document.getElementById("par1").innerHTML = "Precio : "+precio;
+               }
+          </script>
+          <form  id="form1" name="selecionIngredientes" >
+               <input type="radio" name="masas" value="1" id="m1" onclick="calcular();"> Masa fina<br>
+               <input type="radio" name="masas" value="2" id="m2" onclick="calcular();"> Masa doble<br>
+               <input type="radio" name="masas" value="10" id="m3" onclick="calcular();"> Hojaldre<br><br>
+
+               <select id="sabores" onchange="calcular()">
+                    <option  value="1">Napolitana</option>
+                    <option value="2">4 Quesos</option>
+                    <option value="3">Hawaiana</option>
+                    <option value="4">Especial de la casa</option>
+               </select>
+               <input type="checkbox" name="doblequeso" value="2">Doble de queso<br>
+               <p id="par1">Precio : 
+          </form>
+     </body>
+</html>
