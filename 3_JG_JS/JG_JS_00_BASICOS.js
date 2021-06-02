@@ -6,26 +6,32 @@ var array = [];
 var arra1 = [0, 0, 0];
 var nombres = new Array("Juan", "Luis", "Ana", "Eva");
 var arra2 = new Array(5);
+
 // - meter
 arra1.push(23); // meter un elemento al final del array
+
 // - rellenar
 arra2.fill(4); // llena el array con el valor dado
+
 // - sacar
 var elem = nombres.pop(); // elimina el ultimo elemento y lo devuelve
 var elem = nombres.shift(); // elimina el primer elemento y lo devuelve
 var elem = nombres.splice(2, 1); // quita 1 elemento desde la posición 2
+
 // - borrar todo
 nombres = []; // borra todos los elementos
+
 // - recorrer
 var nombres = new Array("Juan", "Pablo", "Ana", "Eva");
 for (var i = 0; i < 4; i++) {
     alert(nombres[i]) // escribe uno a uno todos los nombres
 }
+
 for (i in arr) {
     alert(nombres[i])
 }
-//  Desordenar un array o matriz
 
+//  Desordenar un array o matriz
 function desordenaArray(unarray) {
     arraydesordenado = unarray.sort(function() { return Math.random() - 0.5 });
     return arraydesordenado;
@@ -56,6 +62,13 @@ for (var i = 0; i < x.length; i++) {
 
 // ===================== FUNCIONES CALLBACK  ====================
 // - con arrays
+
+const array1 = ['a', 'b', 'c'];
+array1.forEach(element => {
+    console.log(element)
+});
+
+
 var contenido = "";
 
 function escribeContenido(value, index, array) {
@@ -65,6 +78,7 @@ function escribeContenido(value, index, array) {
 var nums = [64, 25, 13, 24, 18, 11, 43];
 nums.forEach(escribeContenido)
 document.write(contenido)
+
 
 
 

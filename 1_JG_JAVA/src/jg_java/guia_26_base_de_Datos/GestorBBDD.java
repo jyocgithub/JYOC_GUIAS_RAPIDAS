@@ -1,4 +1,4 @@
-package jyoc_java_guias.guia_26_base_de_Datos;
+package jg_java.guia_26_base_de_Datos;
 
 
 

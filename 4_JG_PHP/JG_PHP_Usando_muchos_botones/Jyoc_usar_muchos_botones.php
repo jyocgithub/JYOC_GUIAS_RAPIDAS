@@ -2,7 +2,7 @@
 
 
 //------------------- SI DOS BOTONES PUEDEN TENER DISTINTO NOMBRE, EJEMPLO 1
-// Usamos el elemento input de type=submit, con el mismo name, modificando su value y preguntando por él en $_POST
+// Usamos el elemento input de type=submit, con DISTINTO name,  su value y preguntando por él en $_POST
 $texto =    '
 <!DOCTYPE html>
 <html>
@@ -48,7 +48,7 @@ if (isset($_POST['acceso'])) {
     }
 }
 
-//------------------- SI DOS BOTONES NO PUEDEN TENER DISTINTO NOMBRE, HAN DE TENER EL MISMO
+//------------------- CUANDO DOS BOTONES NO PUEDEN TENER DISTINTO NOMBRE, HAN DE TENER EL MISMO
 // Usamos el elemento Button, con el mismo name, modificando su value y dando contenido fuera 
 $texto =    '
 <!DOCTYPE html>

@@ -1,4 +1,4 @@
-package jyoc_java_guias;
+package jg_java;
 
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;

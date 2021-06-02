@@ -1,3 +1,0 @@
-esto es un texto original para encriptar con DES
-tiene solo tres lineas
-esta es la ultima linea. Vale.

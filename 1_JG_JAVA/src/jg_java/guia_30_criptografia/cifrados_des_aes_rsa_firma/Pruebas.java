@@ -1,25 +1,25 @@
-package jyoc_java_guias.guia_30_criptografia.cifrados_des_aes_rsa_firma;
+package jg_java.guia_30_criptografia.cifrados_des_aes_rsa_firma;
 
 public class Pruebas {
 
 
     public static void main(String[] args) {
+        System.out.println("arrancamos...");
 
-
-//        pruebaDES_FicheroTexto();
-  //      pruebaAES_Texto();
+        pruebaDES_FicheroTexto();
+//        pruebaAES_Texto();
 //        pruebaHASH1();
 //        pruebaHASH2();
 
-        pruebaRSA_FicheroTexto();
- //       prueba_firmadigital();
+//        pruebaRSA_FicheroTexto();
+//        prueba_firmadigital();
 
     }
 
     public static void pruebaDES_FicheroTexto(){
 
-        GestorCifrados.conDES_cifrarFicheroTexto("sinencriptarDES.txt", "yaencriptadodes.txt", "claveDESobtenida.txt");
-        GestorCifrados.conDES_descifrarFicheroTexto("yaencriptadodes.txt", "desencriptadoDES.txt", "claveDESobtenida.txt");
+        GestorCifrados.conDES_cifrarFicheroTexto("./ficheros_adjuntos/sinencriptarDES.txt", "./ficheros_adjuntos/yaencriptadodes.txt", "./ficheros_adjuntos/claveDES.txt");
+        GestorCifrados.conDES_descifrarFicheroTexto("./ficheros_adjuntos/yaencriptadodes.txt", "./ficheros_adjuntos/desencriptadoDES.txt", "./ficheros_adjuntos/claveDES.txt");
 
     }
 
@@ -51,15 +51,15 @@ public class Pruebas {
     }
     public static void pruebaHASH2(){
 
-        GestorCifrados.conHASH_encriptarFicheroTexto("sinencriptarHASH.txt", "yaencriptadoHASH.bin");
+        GestorCifrados.conHASH_encriptarFicheroTexto("./ficheros_adjuntos/sinencriptarHASH.txt", "./ficheros_adjuntos/yaencriptadoHASH.bin");
 
     }
 
 
     public static void pruebaRSA_FicheroTexto(){
 
-        GestorCifrados.conRSA_cifrarFichero("sinencriptarRSA.txt", "yaencriptadoRSA.txt", "laclavepublica.bin");
-        GestorCifrados.conRSA_descifrarFichero( "yaencriptadoRSA.txt", "desencriptadoRSA.txt", "laclavepublica.bin");
+        GestorCifrados.conRSA_cifrarFichero("./ficheros_adjuntos/sinencriptarRSA.txt", "./ficheros_adjuntos/yaencriptadoRSA.txt", "./ficheros_adjuntos/laclavepublica.bin");
+        GestorCifrados.conRSA_descifrarFichero( "./ficheros_adjuntos/yaencriptadoRSA.txt", "./ficheros_adjuntos/desencriptadoRSA.txt", "./ficheros_adjuntos/laclavepublica.bin");
 
     }
 

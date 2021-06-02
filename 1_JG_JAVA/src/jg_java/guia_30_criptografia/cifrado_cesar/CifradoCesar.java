@@ -1,4 +1,4 @@
-package jyoc_java_guias.guia_30_criptografia.cifrado_cesar;
+package jg_java.guia_30_criptografia.cifrado_cesar;
 
 public class CifradoCesar {
 

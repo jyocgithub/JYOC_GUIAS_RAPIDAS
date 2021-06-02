@@ -1,4 +1,4 @@
-package jyoc_java_guias.guia_30_criptografia.cifrados_des_aes_rsa_firma;
+package jg_java.guia_30_criptografia.cifrados_des_aes_rsa_firma;
 
 import sun.security.provider.SHA;
 
@@ -25,15 +25,14 @@ public class GestorCifrados {
 
 
     //  +-------------------------------------------------+
-    //  |   CIFRADO CON DES                               |
-    //  |                                                 |
+    //  |   SIMETRICOS - CIFRADO CON DES                  |
     //  +-------------------------------------------------+
 
     public static byte[] mensajeCifrado = null;
     public static Cipher aes = null;
     public static Key key = null;
 
-    public static void conDES_cifrarFicheroTexto(String param_nombreficheroentrada, String param_nombreficherosalida, String param_nombreficheroclaveobtenida) {
+    public static void conDES_cifrarFicheroTexto(String param_nombreficheroentrada, String param_nombreficherosalida, String param_nombreFicheroClaveQueSeVaACrear) {
         // Creamos un objeto KeyGenerator asociado al algoritmo de encriptado a utilizar
         // (DES en este caso, algoritmo simétrico)
         // KeyGenerator  y las clases siguientes de procesado de encriptación son clases que ofrece
@@ -90,11 +89,11 @@ public class GestorCifrados {
             DESKeySpec obDESKeySpec = (DESKeySpec) keyfac.getKeySpec(obSecretKey, DESKeySpec.class);
 
             // Se crea un fichero para escribir la clave,
-            File fichclave = new File(param_nombreficheroclaveobtenida);
+            File fichclave = new File(param_nombreFicheroClaveQueSeVaACrear);
             if (!fichclave.exists()) fichclave.createNewFile();
             FileOutputStream fosclave = new FileOutputStream(fichclave);
 
-            // Se escribe dicha clace tras obtenerla a través de la especificación obtenida en el objeto DESKeySpec, con su método getKey()
+            // Se escribe dicha clave tras obtenerla a través de la especificación obtenida en el objeto DESKeySpec, con su método getKey()
             fosclave.write(obDESKeySpec.getKey());
             fosclave.close();
             System.out.println("Cifrado completo¡");
@@ -107,14 +106,14 @@ public class GestorCifrados {
 
     }
 
-    public static void conDES_descifrarFicheroTexto(String param_nombreficheroentrada, String param_nombreficherosalida, String param_nombreficheroclaveobtenida) {
+    public static void conDES_descifrarFicheroTexto(String param_nombreficheroentrada, String param_nombreficherosalida, String param_nombreFicheroClavePreviamenteObtenida) {
 
         try {
 
             // Abrimos el fichero con la clave, y lo leemos con un objeto que hace stream,
             // de la clase FileInputStream.
             // La lectura la metemos en un array de bytes que llamamos arrayByteConClave
-            File fichclave = new File(param_nombreficheroclaveobtenida);
+            File fichclave = new File(param_nombreFicheroClavePreviamenteObtenida);
             FileInputStream fisClave = new FileInputStream(fichclave);
             byte[] arrayByteConClave = new byte[(int) fichclave.length()];
             fisClave.read(arrayByteConClave);
@@ -164,8 +163,7 @@ public class GestorCifrados {
     }
 
     //  +-------------------------------------------------+
-    //  |   CIFRADO CON AES                               |
-    //  |                                                 |
+    //  |    SIMETRICOS - CIFRADO CON AES                 |
     //  +-------------------------------------------------+
 
     public static String conAES_cifrarString(String mensajeoriginal) {
@@ -228,11 +226,8 @@ public class GestorCifrados {
     // **********************************************
 
 
-
-
     //  +-------------------------------------------------+
-    //  |   CIFRADO CON RSA                               |
-    //  |                                                 |
+    //  |    ASIMETRICOS - CIFRADO CON RSA                |
     //  +-------------------------------------------------+
 
     static private PublicKey obClavePublica;
@@ -261,7 +256,7 @@ public class GestorCifrados {
                     e.printStackTrace();
                 }
             } else {
-                System.out.println("No existe ese fichero");
+                System.out.println("No existe ese fichero que quiere encriptar");
             }
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -296,7 +291,7 @@ public class GestorCifrados {
                 e.printStackTrace();
             }
         } else {
-            System.out.println("No existe ese fichero");
+            System.out.println("No existe ese fichero que quiere desencriptar");
         }
     }
 
@@ -325,8 +320,7 @@ public class GestorCifrados {
 
 
     //  +-------------------------------------------------+
-    //  |   CIFRADO CON HASH MID5                          |
-    //  |                                                 |
+    //  |   CIFRADO CON HASH MID5                         |
     //  +-------------------------------------------------+
 
     public static String conHASH_encriptarString(String mensaje_original) {

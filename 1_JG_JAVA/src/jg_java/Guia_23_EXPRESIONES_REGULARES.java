@@ -1,4 +1,4 @@
-package jyoc_java_guias;
+package jg_java;
 
 import java.io.*;
 import java.util.ArrayList;

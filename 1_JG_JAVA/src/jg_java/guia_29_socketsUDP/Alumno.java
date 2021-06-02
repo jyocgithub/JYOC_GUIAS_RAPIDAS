@@ -1,4 +1,4 @@
-package jyoc_java_guias.guia_29_socketsUDP;
+package jg_java.guia_29_socketsUDP;
 
 import java.io.Serializable;
 

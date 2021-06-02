@@ -1,6 +1,8 @@
-package jyoc_java_guias;
+package jg_java;
 
+//import java.io.*;
 import java.io.*;
+import java.nio.file.Files;
 import java.util.ArrayList;
 
 public class Guia_14_FICHEROS {
@@ -370,8 +372,6 @@ public class Guia_14_FICHEROS {
     }
 
 
-
-
     // ***********************************************************************************************
     // ***********************************************************************************************
     // ******                                                                                   ******
@@ -414,7 +414,6 @@ public class Guia_14_FICHEROS {
             e.printStackTrace();
         }
     }
-
 
 
     //  +-------------------------------------------------+
@@ -467,7 +466,6 @@ public class Guia_14_FICHEROS {
     }
 
 
-
     //  +-------------------------------------------------------------------+
     //  |   FICHERO ALEATORIO                                               |
     //  |   ESCRIBIR COLECCION DE OBJETOS (tanques en este ejemplo)         |
@@ -507,7 +505,6 @@ public class Guia_14_FICHEROS {
     }
 
 
-
     //  +-------------------------------------------------------------------+
     //  |   FICHERO ALEATORIO                                               |
     //  |   LEER  COLECCION DE OBJETOS (tanques en este ejemplo)            |
@@ -537,7 +534,7 @@ public class Guia_14_FICHEROS {
             Tanque cc;
             while (true) {                         // para cada tanque, leo el nombre y el nummotores
                 String nombre = raf.readUTF();
-                int nummot  = raf.readInt();
+                int nummot = raf.readInt();
                 cc = new Tanque(nombre, nummot);
                 listanuevatanques.add(cc);
             }
@@ -555,7 +552,7 @@ public class Guia_14_FICHEROS {
             int posicion = (3 - 1) * TAM_REGISTRO;
             raf.seek(posicion);
             String nombre = raf.readUTF();
-            int nummot  = raf.readInt();
+            int nummot = raf.readInt();
             Tanque t = new Tanque(nombre, nummot);
 
         } catch (IOException e) {
@@ -565,26 +562,71 @@ public class Guia_14_FICHEROS {
     }
 
 
+    // ***********************************************************************************************
+    // ***********************************************************************************************
+    // ******                                                                                   ******
+    // ******                    FICHEROS CON FILE  (USANDO EL FICHERO ENTERO)                  ******
+    // ******                                                                                   ******
+    // ***********************************************************************************************
+    // ***********************************************************************************************
 
+    //  +-------------------------------------------------+
+    //  |   FICHEROS CON FILE                             |
+    //  +-------------------------------------------------+
 
+    public void ejemplosFileArchivo() throws IOException {
+        // Crear un fichero
+        File fich1 = new File("unoDeTexto.txt");
+        fich1.createNewFile();
 
+        // ------------- Saber si un fichero existe
+        File fich2 = new File("unoDeTexto.txt");
+        if (fich2.exists()) {
+            System.out.println("unoDeTexto.txt SI existe");
+        } else {
+            System.out.println("unoDeTexto.txt NO existe");
+        }
 
+        // ------------- Saber el path completo de un fichero
+        String path = fich1.getPath();
 
+        // ------------- Borrar un fichero
+        File fich3 = new File("ficheroABorrar.txt");
+        fich3.createNewFile(); // lo creamos primero if (fich3.exists()) {
 
+        System.out.println("ficheroABorrar.txt SI existe"); // vemos que SI existe } fich3.delete(); if (!fich3.exists()) {
 
+        System.out.println("ficheroABorrar.txt YA NO existe"); // vemos que YA NO existe }
 
+        // ------------- Renombrar un fichero
+        File fichInicial = new File("ficheroARenombrar.txt");
+        // creamos primero el nuevo fichero
+        fichInicial.createNewFile();
+        File fichNuevo = new File("ficheroNuevoNombre.txt");
+        fichInicial.renameTo(fichNuevo);
+        // vemos que YA NO existe
+        if (fichNuevo.exists()) {
+            System.out.println("ficheroNuevoNombre.txt YA existe");
+        }
 
+        // ------------- Copiar un fichero
+        File fichOrigen = new File("ficheroOrigen.txt");
+        File fichDestino = new File("ficheroOrigen.txt");
+        // creamos primero el nuevo fichero
+        fichOrigen.createNewFile();
+        Files.copy(fichOrigen.toPath(), fichDestino.toPath());
 
-
-
-
-
-
-
-
-
-
-
+        // ------------- Mover un fichero
+        File fichPrimerSitio = new File("ficheroMovible.txt");
+        // creamos primero el nuevo fichero
+        fichPrimerSitio.createNewFile();
+        File fichSegundoSitio = new File("dirCosas/ficheroMovible.txt");
+        fichPrimerSitio.renameTo(fichSegundoSitio);
+        // vemos que se ha movido
+        if (fichSegundoSitio.exists()) {
+            System.out.println("ficheroMovible.txt esta en nuevo sitio");
+        }
+    }
 
 
     // **********************************************

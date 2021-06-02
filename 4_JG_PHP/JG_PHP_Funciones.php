@@ -38,18 +38,12 @@ function endsWith( $origen, $busqueda ) {
 }
 
 // ejemplo de llamada
-descargaImagen('https://www.gstatic.com/webp/gallery3/1.png', 'flor.jpg', '.');
+// descargaImagen('https://www.gstatic.com/webp/gallery3/1.png', 'flor.jpg', '.');
 
 function descargaImagen($url, $nombreimagen, $directorio){
     $content = file_get_contents($url);
     file_put_contents($directorio . "/" . $nombreimagen, $content);
 }
-
-
-
-
-
-
 
 
 

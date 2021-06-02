@@ -1,17 +1,50 @@
 <?php
 
 $conexion;
+$bbdd = "JYOC_LIBROS";
+$usuario = "root";
+$password = "root";
+
 
 function conectar()
 {
-    global $conexion;
+    global $conexion, $bbdd, $usuario, $password;
     try {
-        $conexion = new PDO('mysql:host=127.0.0.1; dbname=MIDIETA; charset=UTF8', 'root', 'root');
+        $conexion = new PDO("mysql:host=127.0.0.1; dbname=$bbdd; charset=UTF8", $usuario, $password);
         $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();
     }
 }
+
+function desconectar()
+{
+    global $conexion;
+    try {
+        $conexion = null;
+        unset($conexion);
+    } catch (PDOException $ex) {
+        echo "Error al desconectar a la base de datos" . $ex->getMessage();
+    }
+}
+
+// Usando un metodo generico de consultas simples
+function selectSimple($instruccionSelectSql)
+{
+    $registros = [];
+    try {
+        conectar();
+        global $conexion;
+        $registros = $conexion->query($instruccionSelectSql);
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+    desconectar();
+    return $registros;
+}
+
+
+
 
 function registrarUsuario($email, $apellidos, $nombre, $sexo, $pass, $peso, $altura)
 {
@@ -33,29 +66,14 @@ function registrarUsuario($email, $apellidos, $nombre, $sexo, $pass, $peso, $alt
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();
     }
-    desconectar();
 }
 
-// Usando un metodo generico de consultas simples
-function selectSimple($instruccionSelectSql)
-{
-    $registros=[];
-    try {
-        conectar();
-        global $conexion;
-        $registros = $conexion->query($instruccionSelectSql);
-    } catch (PDOException $e) {
-        echo 'Error: ' . $e->getMessage();
-    }
-    desconectar();
-    return $registros;
-}
 
 
 // Usando un metodo de consultas para cada tabla (peor)
 function consultarAlimentos()
 {
-    $registros=[];
+    $registros = [];
     try {
         conectar();
         global $conexion;
@@ -66,9 +84,10 @@ function consultarAlimentos()
     desconectar();
     return $registros;
 }
-function consultarIngesta(){
-    {
-        $registros=[];
+
+function consultarIngesta()
+{ 
+        $registros = [];
         try {
             conectar();
             global $conexion;
@@ -78,7 +97,7 @@ function consultarIngesta(){
         }
         desconectar();
         return $registros;
-    }
+    
 }
 
 
@@ -86,26 +105,15 @@ function consultarIngesta(){
 // Usando un metodo generico de consultas de un datro simple detipo entero
 function buscarCampoInteger($tabla, $valornecesario, $campoWhere, $valorWhere)
 {
-    $resultado="";
+    $resultado = "";
     try {
         conectar();
         global $conexion;
         $registros = $conexion->query("select $valornecesario from $tabla where $campoWhere= $valorWhere");
         $resultado = $registros->fetch(PDO::FETCH_ASSOC);
-
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();
     }
     desconectar();
     return $resultado[$valornecesario];
-}
-
-function desconectar()
-{
-    global $conexion;
-    try {
-        $conexion = null;
-    } catch (PDOException $e) {
-        echo 'Error: ' . $e->getMessage();
-    }
 }

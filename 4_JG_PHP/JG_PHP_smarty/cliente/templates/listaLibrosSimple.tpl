@@ -1,13 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>EJERCICIO REPASO SMARTYS</title>
-    <link href="../css/listaLibros.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
+{include file="header.tpl" title="Ejercicio JYOCSmarty"}
+    Biblioteca de {$nombre}
     <div class="contenedor">
         <h1>Relación de LIBROS</h1>
         <form action="" method="POST">
@@ -32,6 +24,20 @@
             </table>
         </form>
     </div>
-</body>
 
-</html>
+    ==============  otros ejemplos de uso de smarty
+    <br>
+    Fecha y hora actuales:  {$smarty.now|date_format:"%Y-%m-%d %H:%M:%S"} 
+    <br>
+    La variable de entorno SERVER_NAME es : {$smarty.server.SERVER_NAME}
+    <br>
+    La variable de usuario $mensajecorto es : {$mensajecorto}
+    <br>
+    La variable de usuario $mensajecorto toda en mayusculas es  {$mensajecorto|upper}
+    <br>
+    La variable de usuario $mensajecorto "capitalizada" es  {$mensajecorto|capitalize}
+    <br>
+    Mas ejemplos en la carpeta smarty/demo/indexphp  y   smarty/demo/templates
+
+
+{include file="footer.tpl"}
