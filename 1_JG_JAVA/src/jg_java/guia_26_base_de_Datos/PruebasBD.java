@@ -4,7 +4,7 @@ package jg_java.guia_26_base_de_Datos;
 
 import java.util.Date;
 
-public class Guia_16_BASES_DE_DATOS {
+public class PruebasBD {
     public static void main(String[] args) {
 
         // Todos los metodos estan en GestorBBDD
